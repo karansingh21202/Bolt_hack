@@ -2,9 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedStars from './AnimatedStars';
 
+interface Sponsor {
+  id: number;
+  name: string;
+  logo: string;
+  description: string;
+  website: string;
+}
+
 function RevolvingSponsorsSection() {
   // Selected 7 sponsors from the original list
-  const sponsors = [
+  const sponsors: Sponsor[] = [
     {
       id: 1,
       name: "Cloudflare",
@@ -56,16 +64,15 @@ function RevolvingSponsorsSection() {
     },
   ];
   
-
   const [angle, setAngle] = useState(0);
-  const [selectedSponsor, setSelectedSponsor] = useState(null);
+  const [selectedSponsor, setSelectedSponsor] = useState<Sponsor | null>(null);
 
   // Auto-rotate the carousel with increased speed
   useEffect(() => {
-    let intervalId;
+    let intervalId: ReturnType<typeof setInterval>;
     if (!selectedSponsor) {
       intervalId = setInterval(() => {
-        setAngle(prevAngle => (prevAngle + 0.9) % 360); // Increased rotation speed from 0.5 to 0.8
+        setAngle(prevAngle => (prevAngle + 0.9) % 360);
       }, 50);
     }
     return () => clearInterval(intervalId);
@@ -75,7 +82,7 @@ function RevolvingSponsorsSection() {
   const centerX = 550;
   const centerY = 200;
 
-  const handleSponsorClick = (sponsor) => {
+  const handleSponsorClick = (sponsor: Sponsor) => {
     setSelectedSponsor(sponsor);
   };
 
@@ -84,7 +91,7 @@ function RevolvingSponsorsSection() {
   };
 
   // Function to handle website visit when clicking on card
-  const visitWebsite = (website) => {
+  const visitWebsite = (website: string) => {
     window.open(`https://${website}`, '_blank');
     setTimeout(() => {
       closeCard();
@@ -117,7 +124,7 @@ function RevolvingSponsorsSection() {
           SPONSORS
         </h2>
         <p className="text-white text-lg opacity-80 max-w-2xl mx-auto">
-        Fueled by caffeine, code, and occasional existential crises from industry experts.
+          Fueled by caffeine, code, and occasional existential crises from industry experts.
         </p>
       </motion.div>
 
@@ -135,7 +142,7 @@ function RevolvingSponsorsSection() {
           const scale = (z + radius) / (2 * radius);
           const opacity = 0.4 + 0.6 * scale;
           
-          // Increased card size (from 120+60 to 140+70)
+          // Increased card size
           const size = 200 + 140 * scale;
           
           return (
@@ -156,33 +163,21 @@ function RevolvingSponsorsSection() {
               whileHover={{ scale: scale * 1.1 }}
               transition={{ duration: 0.3 }}
             >
-              {/* <img
+              <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="max-h-80 max-w-full" // Increased from max-h-16
-                style={{ 
-                  filter: 'brightness(0.95) contrast(1.05)',
-                  transform: `scale(${scale})` 
+                className="max-h-96 max-w-full object-contain"
+                style={{
+                  filter: 'brightness(1) contrast(1.1) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8))',
+                  transform: `scale(${scale})`,
                 }}
-              /> */}
-
-<img
-  src={sponsor.logo}
-  alt={sponsor.name}
-  className="max-h-96 max-w-full object-contain"
-  style={{
-    filter: 'brightness(1) contrast(1.1) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8))',
-    transform: `scale(${scale})`,
-  }}
-/>
-
-
+              />
             </motion.div>
           );
         })}
       </div>
       
-      {/* Sponsor Information Card - Removed Pause Button */}
+      {/* Sponsor Information Card */}
       {selectedSponsor && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
           <motion.div 
@@ -213,7 +208,7 @@ function RevolvingSponsorsSection() {
                 <img
                   src={selectedSponsor.logo}
                   alt={selectedSponsor.name}
-                  className="max-h-40 max-w-full" // Increased from max-h-20
+                  className="max-h-40 max-w-full"
                 />
               </div>
             </div>
@@ -221,12 +216,6 @@ function RevolvingSponsorsSection() {
             <div className="mb-6">
               <p className="text-gray-300 text-lg">{selectedSponsor.description}</p>
             </div>
-            {/* remove the website link given */}
-            {/* <div className="flex justify-center items-center">
-              <span className="text-blue-300 text-lg hover:text-blue-200 hover:underline">
-                {selectedSponsor.website} <span className="ml-2">→</span>
-              </span>
-            </div> */}
           </motion.div>
         </div>
       )}
