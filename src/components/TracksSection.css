@@ -1,0 +1,128 @@
+
+/* Just a sample to demonstrate the radial stripes/rays. 
+   Adjust colors, angles, animation speed, etc., as needed. */
+
+/* Container for the solid background color (applied inline in JS) */
+.rotating-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  /* The radial “rays” overlay */
+  .rotating-rays {
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 2;
+    animation: spin 12s linear infinite;
+    /* 
+      repeating-conic-gradient creates repeated "wedge" stripes 
+      from the center, with angles controlling the stripe width.
+      Tweak the angles to get the spacing you want.
+    */
+    background: repeating-conic-gradient(
+      from 0deg,
+      rgba(255, 255, 255, 0.15) 0deg 15deg,
+      transparent 15deg 30deg
+    );
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* 
+    The card container itself. 
+    Tweak border-radius, shadow, etc., if desired.
+  */
+  .track-box {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .track-box:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
+  
