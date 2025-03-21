@@ -1,4 +1,4 @@
-import Header from './components/Header';
+
 import Background from './components/Background';
 import AnimatedBirds from './components/AnimatedBirds';
 import HeroSection from './components/HeroSection';
@@ -17,7 +17,7 @@ function App() {
     <div className="relative min-h-screen overflow-hidden">
       <Background />
       <AnimatedBirds />
-      {/* <Header /> */}
+
 
       <main>
         <HeroSection />
