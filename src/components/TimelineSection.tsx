@@ -28,7 +28,7 @@ function TimelineSection() {
   const timelineEvents: TimelineEvent[] = [
     {
       id: 1,
-      date: "March 15, 2024",
+      date: "March 15, 2025",
       title: "Level 1: Registration Opens! 🚀",
       description: "Time to join the coolest hackathon party! Early birds get the extra swag (and maybe a virtual high-five). Whether you're a coding wizard or just starting your dev journey, there's room for everyone in this epic adventure! 🎮",
       icon: "https://cdn-icons-png.flaticon.com/512/1945/1945940.png",
@@ -36,7 +36,7 @@ function TimelineSection() {
     },
     {
       id: 2,
-      date: "March 30, 2024",
+      date: "March 30, 2025",
       title: "Squad Assembly Time! 🤝",
       description: "Find your dream team or join the party solo! Looking for the perfect teammates? Our matchmaking system is like Tinder, but for hackers (minus the awkward small talk). Max party size: 4 players! 🎯",
       icon: "https://cdn-icons-png.flaticon.com/512/1356/1356479.png",
@@ -44,7 +44,7 @@ function TimelineSection() {
     },
     {
       id: 3,
-      date: "April 7, 2024",
+      date: "April 7, 2025",
       title: "Boss Battle Begins! ⚔️",
       description: "The main event is here! Grab your energy drinks, put on your lucky coding socks, and get ready for 48 hours of pure awesomeness. Remember: Sleep is for the weak (just kidding, please take care of yourself!) 💪",
       icon: "https://cdn-icons-png.flaticon.com/512/1157/1157109.png",
@@ -52,7 +52,7 @@ function TimelineSection() {
     },
     {
       id: 4,
-      date: "April 8, 2024",
+      date: "April 8, 2025",
       title: "Final Boss Deadline! ⏰",
       description: "Time to show off your masterpiece! Whether it's held together by duct tape and prayers or it's the next billion-dollar idea, we want to see it! Don't forget to make your demo video extra spicy! 🌶️",
       icon: "https://cdn-icons-png.flaticon.com/512/6614/6614677.png",
@@ -60,7 +60,7 @@ function TimelineSection() {
     },
     {
       id: 5,
-      date: "April 8, 2024",
+      date: "April 8, 2025",
       title: "Victory Royale! 👑",
       description: "The moment of glory arrives! Join us for the grand finale where we crown the hackathon heroes. Spoiler alert: Everyone's a winner (but some winners get cool prizes and eternal glory!) 🏆",
       icon: "https://cdn-icons-png.flaticon.com/512/3176/3176272.png",
