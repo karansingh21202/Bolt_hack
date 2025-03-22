@@ -14,7 +14,7 @@ function TracksSection() {
   ];
 
   return (
-    <section className="relative py-20 px-4 bg-[#0a0025] overflow-hidden">
+    <section className="relative py-20 px-4 bg-[#0a0025] overflow-visible">
       {/* Full Section Background */}
       <div className="absolute inset-0 z-0">
         {/* Rotating Background Layer */}
