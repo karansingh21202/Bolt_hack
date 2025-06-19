@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# Bolt Hackathon Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive static landing page built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[https://bolt-hack-bujz.vercel.app](https://bolt-hack-bujz.vercel.app)
 
-## Expanding the ESLint configuration
+## 🔧 Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone: `git clone https://github.com/karansingh21202/Bolt_hack.git`
+2. Install: `npm install`
+3. Dev: `npm run dev` ([http://localhost:5173](http://localhost:5173))
+4. Build: `npm run build`
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠 Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* React + TypeScript + Vite
+* Tailwind CSS
+* ESLint & Prettier
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Deployment
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+* Deployed on Vercel (auto-deploy on push to main)
+* Alternative: Netlify or GitHub Pages (adjust `base` in `vite.config.ts` if needed)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📈 Scripts
+
+* `dev`: start dev server
+* `build`: production build
+* `preview`: preview build
+* `lint`: ESLint
+* `format`: Prettier
+
+## 🎯 Next Steps
+
+* Add responsive navbar & scroll animations
+* Integrate a contact form (Netlify Forms / Formspree)
+* Enhance accessibility and SEO meta tags
+* Add analytics
+
+## 🤝 Contributing
+
+1. Fork repo
+2. Create branch, implement, lint/format
+3. PR with description
+
+## 📄 License
+
+MIT © 2025 Karan Singh
